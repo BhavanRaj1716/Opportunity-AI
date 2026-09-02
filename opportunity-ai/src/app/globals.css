@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), sans-serif;
+
+  --color-ink-50: #f6f7fb;
+  --color-ink-100: #ebedf5;
+  --color-ink-200: #d6dae9;
+  --color-ink-400: #8b93b0;
+  --color-ink-600: #4c5477;
+  --color-ink-800: #1e2340;
+  --color-ink-900: #12162b;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-300: #a5b4fc;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-mint-500: #10b981;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-brand-100);
+}
+
+@utility card {
+  border-radius: 1rem;
+  border: 1px solid var(--color-ink-200);
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgb(18 22 43 / 0.04), 0 12px 32px -18px rgb(18 22 43 / 0.35);
+}
+
+@utility mesh {
+  background-image:
+    radial-gradient(60rem 40rem at 15% -10%, rgb(99 102 241 / 0.22), transparent 60%),
+    radial-gradient(48rem 32rem at 95% 0%, rgb(168 85 247 / 0.2), transparent 55%),
+    radial-gradient(40rem 30rem at 60% 110%, rgb(16 185 129 / 0.14), transparent 60%);
+}
+
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-in {
+  animation: float-up 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd0e2;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}

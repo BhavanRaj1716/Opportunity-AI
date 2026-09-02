@@ -1,0 +1,14 @@
+{
+  "name": "oppurtunity-parent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix o_AI\" \"npm run dev --prefix opportunity-ai\""
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
